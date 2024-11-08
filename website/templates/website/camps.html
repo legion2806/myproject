@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Camps</title>
+        {% load static %}
+<link rel="stylesheet" href="{% static 'website/style.css' %}">
+
+    </head>
+    <body>
+        <div class="bannerCamp">
+            <div class="navbar">
+                <img src="{% static 'website/logo.png' %}" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'weather' %}">Weather</a></li>
+                    <li><a href="{% url 'camps' %}">Camps</a></li>
+                    <li><a href="{% url 'info' %}">About us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    {% else %}                    
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="camp">
+                <h1>The most popular Campsites in 2024</h1>
+                <p>Every year, we present the camping. <br> info Award to the 110 most popular campsites in <br>Europe based on your camper reviews. 
+                For the fourth time in a row, <br>Campingpark Kühlungsborn is on the winner's podium, <br>
+                followed by Camping Sonnenland Lutzmannsburg (2nd place)<br> and Camping Natürlich Hell. (3rd place).</p>
+                <img src="bestcamp.png" class="winner">
+            </div>
+            <div class="camp1">
+                <h1>Campsites of the Month</h1>
+                <p>New at camping.info: Every month, we nominate the <br>
+                campsite with a high number and very good camper <br> 
+                reviews as the "Campsite of the Month". <br> 
+                So, you can not only discover great, popular places, but <br>
+                 also get great inspiration for camping in specific travel seasons. <br> 
+                 Which campsite is especially popular in June? <br>
+                 Where to go best in November?</p>
+                <img src="camp1.png" class="winner">
+            </div>
+            <div class="campInfo">
+                <h1>What is camping?</h1>
+                <p>Camping is a form of outdoor recreation <br>
+                    or outdoor education involving overnight<br>
+                     stays with a basic temporary shelter such<br>
+                      as a tent. Camping can also include a <br>
+                      recreational vehicle, sheltered cabins,<br>
+                       a permanent tent, a shelter such as a<br>
+                        bivy or tarp, or no shelter at all. Typically,<br>
+                         participants leave developed areas to spend<br>
+                          time outdoors, in pursuit of activities providing<br>
+                           them enjoyment or an educational experience.<br>
+                           Spending the night away from<br> home distinguishes camping<br>
+                            from day-tripping, picnicking, <br>and other outdoor activities. <br>
+                            Tent camping in Sierra Nevada <br>National Park Tent camping in <br>
+                            Turkey Camping as a recreational<br> activity became popular among<br>
+                            elites in the early 20th century.<br> With time, it grew in popularity <br>
+                            among other socioeconomic classes. <br>Modern campers frequent publicly<br>
+                             owned natural resources such as<br> national and state parks, wilderness <br>
+                             areas, and commercial campgrounds. <br>In a few countries, such as Sweden <br>
+                             and Scotland, public camping is legal on<br> privately held land as well. <br>
+                             Camping is a key part of many youth <br>organizations around the world, such as <br>
+                             Scouting, which use it to teach both <br>self-reliance and teamwork. School<br>
+                              camping trips also have numerous benefits <br>and can play an essential role <br>
+                              in the personal growth and development of students</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>

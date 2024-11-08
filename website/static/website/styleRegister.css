@@ -1,0 +1,163 @@
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+/* Apply a background color to the body */
+body {
+    width: 100%;
+    height: 130vh;
+    background-image: linear-gradient(rgba(219, 158, 45, 0.336), rgba(219, 158, 45, 0.336)), url(backgroung.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.camps{
+    text-align: left;
+}
+
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #f5c104, #5b548a);
+    color: #fff;
+    margin: 10px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+/* Apply styles to headings */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+/* Apply styles to paragraphs */
+p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+/* Apply styles to unordered and ordered lists */
+ul, ol {
+    margin-bottom: 16px;
+}
+
+li {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Apply styles to links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Apply styles to form elements */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/* Responsive Design using Media Queries */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+@media print {
+    /* Styles for print version */
+    nav {
+        display: none;
+    }
+
+    /* Add more print styles as needed */
+}

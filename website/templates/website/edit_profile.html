@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/styleRegister.css' %}">
+</head>
+<body>
+    <div class="card">
+    <h1>Edit Profile</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save changes</button>
+    </form>
+</div>
+</body>
+</html>
